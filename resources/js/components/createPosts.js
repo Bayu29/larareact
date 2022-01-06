@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-class createPosts extends React.Component {
+import Rightbar from "./Rightbar";
+class CreatePosts extends React.Component {
     state = {
         title: "",
         type: "",
@@ -21,18 +22,6 @@ class createPosts extends React.Component {
     };
 
     render() {
-        var greeting = "";
-        var dt = new Date();
-        var year = dt.getFullYear();
-        var hour = dt.getHours();
-        if (hour >= 1 && hour < 12) {
-            greeting = "Good Morning!!";
-        }
-        if (hour >= 12 && hour < 19) {
-            greeting = "Good Afternoon!!";
-        } else {
-            greeting = "Good Evening!!";
-        }
         return (
             <div className="layout">
                 <div className="sidebar">
@@ -62,20 +51,12 @@ class createPosts extends React.Component {
                             Create Posts
                         </button>
                     </div>
-                    <div className="footer">
-                        <p className="p1">
-                            No copyright | ©️ {year},{" "}
-                            <a href="https://github.com/vikalp2502">
-                                Vikalp Kaushik
-                            </a>
-                        </p>
-                    </div>
                 </div>
                 <div className="actionDiv">
                     <div className="Formdiv">
                         <form onSubmit={this.savePost}>
                             <div className="form-group">
-                                <label>Title:</label>
+                                <label className="top">Title:</label>
                                 <input
                                     type="text"
                                     name="title"
@@ -95,14 +76,18 @@ class createPosts extends React.Component {
                                     onChange={this.handleInput}
                                     required
                                 >
-                                    <option value="Announcement">
-                                        Announcement
+                                    <option value="Technology">
+                                        Technology
                                     </option>
-                                    <option value="Selection">Selection</option>
-                                    <option value="Placement">Placement</option>
-                                    <option value="Training">Training</option>
-                                    <option value="Internship">
-                                        Internship
+                                    <option value="Programming">
+                                        Programming
+                                    </option>
+                                    <option value="Design">Design</option>
+                                    <option value="Development">
+                                        Development
+                                    </option>
+                                    <option value="Creativity">
+                                        Creativity
                                     </option>
                                 </select>
                             </div>
@@ -130,19 +115,10 @@ class createPosts extends React.Component {
                         </form>
                     </div>
                 </div>
-                <div className="right-sidebar">
-                    <div className="Greeting">
-                        <h2>{greeting}</h2>
-                        <h5>Hello, Welcome Back!. And Have A Nice Day</h5>
-                        <button className="primary">
-                            <FontAwesomeIcon icon="calendar" className="icon" />
-                            View Events
-                        </button>
-                    </div>
-                </div>
+               <Rightbar/>
             </div>
         );
     }
 }
 
-export default createPosts;
+export default CreatePosts;

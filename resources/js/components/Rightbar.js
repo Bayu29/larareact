@@ -29,7 +29,7 @@ export default function Rightbar() {
             </div>
             <div className="footer">
                 <p className="p1">
-                    ©️ {year},{" "}
+                    ©️ {year},
                     <a className="link" href="#">
                         SuperCrud
                     </a>

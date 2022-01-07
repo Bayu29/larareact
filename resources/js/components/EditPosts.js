@@ -66,15 +66,15 @@ class EditPosts extends React.Component {
                 </div>
                 <div className="actionDiv">
                     <div className="Formdiv">
-                        <form onSubmit={this.updatePost}>
+                        <form onSubmit={ this.updatePost }>
                             <div className="form-group">
                                 <label className="top">Title:</label>
                                 <input
                                     type="text"
                                     name="title"
                                     className="form-control highlight"
-                                    value={this.state.title}
-                                    onChange={this.handleInput}
+                                    value={ this.state.title }
+                                    onChange={ this.handleInput }
                                     placeholder="Enter the Title"
                                     required
                                 />
@@ -84,8 +84,8 @@ class EditPosts extends React.Component {
                                 <select
                                     name="type"
                                     className="form-control highlight"
-                                    value={this.state.type}
-                                    onChange={this.handleInput}
+                                    value={ this.state.type }
+                                    onChange={ this.handleInput }
                                     required
                                 >
                                     <option value="Technology">
@@ -109,8 +109,8 @@ class EditPosts extends React.Component {
                                     type="text"
                                     name="description"
                                     className="form-control highlight"
-                                    value={this.state.description}
-                                    onChange={this.handleInput}
+                                    value={ this.state.description }
+                                    onChange={ this.handleInput }
                                     placeholder="Write the Description"
                                     required
                                 />

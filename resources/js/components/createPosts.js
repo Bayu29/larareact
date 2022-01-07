@@ -11,8 +11,9 @@ class CreatePosts extends React.Component {
     };
 
     handleInput = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({ [e.target.name] : e.target.value });
     };
+
     savePost = async (e) => {
         e.preventDefault();
         const res = await axios.post("/addPost", this.state);
@@ -54,15 +55,15 @@ class CreatePosts extends React.Component {
                 </div>
                 <div className="actionDiv">
                     <div className="Formdiv">
-                        <form onSubmit={this.savePost}>
+                        <form onSubmit={ this.savePost }>
                             <div className="form-group">
                                 <label className="top">Title:</label>
                                 <input
                                     type="text"
                                     name="title"
                                     className="form-control highlight"
-                                    value={this.state.title}
-                                    onChange={this.handleInput}
+                                    value={ this.state.title }
+                                    onChange={ this.handleInput }
                                     placeholder="Enter the Title"
                                     required
                                 />
@@ -72,8 +73,8 @@ class CreatePosts extends React.Component {
                                 <select
                                     name="type"
                                     className="form-control highlight"
-                                    value={this.state.type}
-                                    onChange={this.handleInput}
+                                    value={ this.state.type }
+                                    onChange={ this.handleInput }
                                     required
                                 >
                                     <option value="Technology">
@@ -97,8 +98,8 @@ class CreatePosts extends React.Component {
                                     type="text"
                                     name="description"
                                     className="form-control highlight"
-                                    value={this.state.description}
-                                    onChange={this.handleInput}
+                                    value={ this.state.description }
+                                    onChange={ this.handleInput }
                                     placeholder="Write the Description"
                                     required
                                 />

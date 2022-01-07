@@ -29,7 +29,7 @@ class Data extends React.Component {
                     </div>
                 </div>
                 <div className="cardBody">
-                    <p className="description">{posts.description}</p>
+                    <p className="description">{ posts.description }</p>
                 </div>
             </div>
         );

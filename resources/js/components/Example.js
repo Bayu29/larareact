@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./fontawesome";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./Home";
 import Dashboard from './Dashboard';
 import CreatePosts from "./CreatePosts";
@@ -15,10 +15,10 @@ function Example() {
             <>
             <Navbar/>
                 <Routes>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/dashboard" exact component={Dashboard} />
-                    <Route path="/addPosts" exact component={CreatePosts}/>
-                    <Route path="/edit/:id" exact component={EditPosts}/>
+                    <Route path="/" exact element={ <Home/> }/>
+                    <Route path="/dashboard" exact element={ <Dashboard/> } />
+                    <Route path="/addPosts" exact element={ <CreatePosts/> }/>
+                    <Route path="/edit/:id" exact element={ <EditPosts/> }/>
                 </Routes>
             </>
         </Router>
